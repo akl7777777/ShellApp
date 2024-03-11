@@ -71,7 +71,8 @@
             "arm64"
           ]
         }
-      ]
+      ],
+      "category": "Utility"
     }
   },
   "devDependencies": {
