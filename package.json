@@ -2,13 +2,15 @@
   "name": "shellapp",
   "version": "1.0.0",
   "description": "一款针对于Electron开发的可以将任意网站变成app的软件",
-  "main": "main.js",
+  "main": "main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "akl7777777",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^29.1.1"
+    "@types/electron": "^1.6.10",
+    "electron": "^29.1.1",
+    "typescript": "^5.4.2"
   }
 }
