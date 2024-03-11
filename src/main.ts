@@ -1,4 +1,7 @@
 import { app, BrowserWindow } from 'electron';
+import { appConfig } from './config';
+
+appConfig.url = process.env.APP_URL || '';
 
 function createWindow(): void {
     const win = new BrowserWindow({
@@ -9,7 +12,7 @@ function createWindow(): void {
         }
     });
 
-    win.loadURL('https://www.example.com');
+    win.loadURL(appConfig.url);
 }
 
 app.whenReady().then(createWindow);
