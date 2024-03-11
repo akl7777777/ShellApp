@@ -17,3 +17,5 @@ npm install dotenv --save
 npm install electron-builder --save-dev
 
 修改.env中的url为你的网站地址
+
+<img width="1114" alt="image" src="https://github.com/akl7777777/ShellApp/assets/84266551/b23824c0-b962-41c3-80e4-3e118978b83d">
