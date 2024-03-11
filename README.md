@@ -12,6 +12,7 @@ npm install typescript electron @types/electron --save-dev
 
 npm install cross-env --save-dev
 npm install dotenv --save
+npm install electron-store --save
 
 
 npm install electron-builder --save-dev

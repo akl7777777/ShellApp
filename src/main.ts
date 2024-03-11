@@ -1,9 +1,11 @@
-import { app, BrowserWindow } from 'electron';
-import { appConfig } from './config';
+import {app, BrowserWindow} from 'electron';
 import dotenv from 'dotenv';
-dotenv.config();
+import * as path from "path";
+const envPath = path.join(app.getAppPath(), '.env');
+dotenv.config({ path: envPath });
 
-appConfig.url = process.env.APP_URL || '';
+const appUrl = process.env.APP_URL || '';
+
 
 function createWindow(): void {
     const win = new BrowserWindow({
@@ -14,7 +16,7 @@ function createWindow(): void {
         }
     });
 
-    win.loadURL(appConfig.url);
+    win.loadURL(appUrl);
 }
 
 app.whenReady().then(createWindow);

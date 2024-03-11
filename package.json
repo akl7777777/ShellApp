@@ -41,6 +41,7 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "electron-store": "^8.2.0"
   }
 }
