@@ -1,0 +1,2 @@
+# ShellApp
+一款针对于Electron开发的可以将任意网站变成app的软件
