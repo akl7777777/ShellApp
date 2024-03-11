@@ -7,8 +7,8 @@
     "build": "tsc",
     "start": "npm run build && cross-env APP_URL=\"https://www.example.com\" electron .",
     "start:custom": "npm run build && cross-env APP_URL=%npm_config_url% electron .",
-    "pack": "npm run build && electron-builder --dir",
-    "dist": "npm run build && electron-builder"
+    "pack": "npm run build && cross-env APP_URL=%npm_config_url% electron-builder --dir",
+    "dist": "npm run build && cross-env APP_URL=%npm_config_url% electron-builder"
   },
   "author": "akl7777777",
   "license": "MIT",
