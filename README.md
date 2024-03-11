@@ -16,8 +16,4 @@ npm install dotenv --save
 
 npm install electron-builder --save-dev
 
-
-
-使用自定义的URL:
-
-npm run start:custom --url="https://www.custom-url.com"
+修改.env中的url为你的网站地址
