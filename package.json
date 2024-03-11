@@ -7,9 +7,16 @@
     "build": "tsc",
     "start": "npm run build && electron .",
     "pack": "npm run build && electron-builder --dir",
-    "dist": "npm run build && electron-builder"
+    "dist": "npm run build && electron-builder",
+    "dist:mac": "npm run build && electron-builder --mac",
+    "dist:win": "npm run build && electron-builder --win --x64 --ia32",
+    "dist:linux": "npm run build && electron-builder --linux --x64 --arm64",
+    "dist:all": "npm run dist:mac && npm run dist:win && npm run dist:linux"
   },
-  "author": "akl7777777",
+  "author": {
+    "name": "akl7777777",
+    "email": "akl7777777@163.com"
+  },
   "license": "MIT",
   "build": {
     "appId": "com.shellgpt.shellapp",
@@ -24,13 +31,47 @@
       ".env"
     ],
     "win": {
-      "target": "nsis"
+      "icon": "build/icon.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
     },
     "mac": {
-      "target": "dmg"
+      "icon": "build/icon.png",
+      "target": [
+        {
+          "target": "default",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ]
     },
     "linux": {
-      "target": "deb"
+      "icon": "build/icon.png",
+      "target": [
+        {
+          "target": "deb",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "rpm",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
     }
   },
   "devDependencies": {
