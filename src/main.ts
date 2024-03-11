@@ -1,5 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 import { appConfig } from './config';
+import dotenv from 'dotenv';
+dotenv.config();
 
 appConfig.url = process.env.APP_URL || '';
 

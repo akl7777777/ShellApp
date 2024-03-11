@@ -11,6 +11,7 @@ npm install typescript electron @types/electron --save-dev
 安装cross-env包,用于在不同操作系统上设置环境变量:
 
 npm install cross-env --save-dev
+npm install dotenv --save
 
 
 npm install electron-builder --save-dev

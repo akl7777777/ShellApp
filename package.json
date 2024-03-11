@@ -21,7 +21,8 @@
     "files": [
       "dist/**/*",
       "node_modules/**/*",
-      "package.json"
+      "package.json",
+      ".env"
     ],
     "win": {
       "target": "nsis"
@@ -39,5 +40,8 @@
     "electron": "^29.1.1",
     "electron-builder": "^24.13.3",
     "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
   }
 }
